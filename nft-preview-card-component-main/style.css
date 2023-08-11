@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  /* border: 2px solid white; */
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
+  --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+}
+
+.relative {
+  position: relative;
+}
+
+.flex-orient {
+  display: flex;
+}
+
+body {
+  background: var(--Very-dark-blue-mainBG);
+  padding: 40px 20px 0;
+}
+
+.container {
+  background: var(--Very-dark-blue-cardBG);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.box {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img {
+  transition: all linear .5s;
+}
+
+.img-equlibrium {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.icon-view {
+  position: absolute;
+  top: 40.4%;
+  left: 42%;
+  opacity: 0;
+}
+
+.box:hover .img-equlibrium {
+  opacity: 1; 
+}
+.box:hover .icon-view {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 22px;
+  color: var(--White);
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+h1:hover {
+  color: var(--Cyan);
+}
+
+h2 {
+  font-size: 16px;
+  color: var(--Soft-blue);
+  font-weight: bolder;
+  line-height: 27px;
+}
+
+.card {
+  justify-content: space-between;
+  gap: 30px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.card-content1,
+.card-content2 {
+  gap: 10px;
+}
+
+.card-content1 h3 {
+  color: var(--Cyan);
+}
+
+.card-content2 h3 {
+  color: var(--Soft-blue);
+  font-weight: 600;
+}
+
+.line-partition {
+  height: 2px;
+  width: 100%;
+  background: var(--Very-dark-blue-line);
+}
+
+.author {
+  align-items: center;
+}
+
+.author div {
+  width: 28%;
+}
+
+.author div img {
+  border-radius: 50%;
+  width: 60%;
+  object-fit: cover;
+  border: 2px solid var(--White);
+}
+
+.author h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--Soft-blue);
+}
+
+span {
+  color: var(--White);
+  cursor: pointer;
+}
+
+span:hover {
+  color: var(--Cyan);
+}
+
+@media only screen and (min-width: 413px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 35px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .author h3 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .icon-view {
+    position: absolute;
+    top: 41.5%;
+    left: 44%;
+  }
+}
